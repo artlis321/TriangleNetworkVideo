@@ -85,8 +85,8 @@ def test():
     O_fpoint = np.array([5-2.108,1.417])
     O_bisect = np.array([5-2.181,1.167])
 
-    for y in tqdm(np.linspace(1.16,1.42,200)):
-        for x in np.linspace(5-2.1,5-2.2,200):
+    for y in tqdm(np.linspace(1.2092330043765869,1.418,200000)):
+        for x in np.linspace(2.8884085094332694,2.892651790062688,1000):
             if (x>y*C_x/C_y) and (x<(B_x*(1-y/C_y)+C_x*(y/C_y))):
                 O = np.array([x,y])
                 vals = testO(A,B,C,O)
@@ -116,10 +116,10 @@ def test():
     plt.plot(max_array_sorted[0],max_array_sorted[1],color='black')
     plt.scatter(max_array_sorted[0],max_array_sorted[1],color='black',s=2)
 
-    np.savetxt('l_max.txt',max_array_sorted[0])
-    np.savetxt('d_min.txt',max_array_sorted[1])
-    np.savetxt('O_x.txt',max_array_sorted[2])
-    np.savetxt('O_y.txt',max_array_sorted[3])
+    #np.savetxt('l_max.txt',max_array_sorted[0])
+    #np.savetxt('d_min.txt',max_array_sorted[1])
+    np.savetxt('Opog_x.txt',max_array_sorted[2])
+    np.savetxt('Opog_y.txt',max_array_sorted[3])
 
     plt.plot(max_array_sorted[2],max_array_sorted[3],color='blue')
     plt.scatter(max_array_sorted[2],max_array_sorted[3],color='blue',s=2)
@@ -135,4 +135,4 @@ def test():
     plt.ylim(0,15)
     plt.show()
 
-#test()
+test()
