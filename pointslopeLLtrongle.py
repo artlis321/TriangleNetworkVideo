@@ -118,8 +118,8 @@ def test():
 
     #np.savetxt('l_max.txt',max_array_sorted[0])
     #np.savetxt('d_min.txt',max_array_sorted[1])
-    np.savetxt('Opog_x.txt',max_array_sorted[2])
-    np.savetxt('Opog_y.txt',max_array_sorted[3])
+    np.savetxt('O_x.txt',max_array_sorted[2])
+    np.savetxt('O_y.txt',max_array_sorted[3])
 
     plt.plot(max_array_sorted[2],max_array_sorted[3],color='blue')
     plt.scatter(max_array_sorted[2],max_array_sorted[3],color='blue',s=2)
@@ -134,5 +134,3 @@ def test():
     plt.xlim(0,20)
     plt.ylim(0,15)
     plt.show()
-
-test()
